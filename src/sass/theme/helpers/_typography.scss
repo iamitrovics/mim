@@ -1,0 +1,126 @@
+// Import fonts and fonts variables
+
+$font-main:"Arial", Sans-serif;
+$font-bold:"Arial", Sans-serif;
+
+$font-medium:"Arial", Sans-serif;
+$font-heading:"Arial", Sans-serif;
+$font-semi:"Arial", Sans-serif;
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body { 
+	-webkit-text-size-adjust: 100%;  //fix for iOS 
+  font-family: $font-main;
+}
+
+p {
+  font-size: 17px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  font-family: $font-main;
+  color:$color-text;
+	a {
+		color:$color-green;
+		&:hover {
+			color:$color-green-dark;
+			text-decoration: underline;
+		}
+	}    
+	strong {
+      font-family: $font-bold;
+      font-weight: bold;
+	}
+}
+
+ul {
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+}
+
+h1 {
+    color:$color-heading;
+    font-family: $font-heading;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0px;
+    margin: 0px;
+    font-family: $font-heading;
+    font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+ body {
+	margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+	display: block;
+}
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+* {
+  padding:0px;
+  margin:0px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  @include animate-fade;
+}

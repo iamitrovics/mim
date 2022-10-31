@@ -1,0 +1,320 @@
+// Top Bar
+#top-bar {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,  0.5);
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    background: $white;
+    z-index:1025;
+    .container {
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include animate-fade;
+        @include bp(lg) {
+            height: 80px;
+        }
+        @include bp(md) {
+            height: 80px;
+        }
+        @include bp(sm-down) {
+            height: 80px;
+        }
+    }
+    // branding
+    .top-bar__branding {
+        img {
+            max-height: 60px;
+            @include bp(desktop-sm) {
+                max-height: 50px;
+            }
+            @include bp(lg) {
+                max-height: 65px;
+            }
+            @include bp(md) {
+                max-height: 65px;
+            }
+            @include bp(sm-down) {
+                max-height: 55px;
+            }
+        }
+    }
+    // nav
+    .top-bar__nav {
+        display: flex;
+        align-items: center;
+        // menu
+        .top-bar__menu {
+            @include bp(lg-down) {
+                display: none;
+            }
+            ul {
+                > li {
+                    display: inline-block;
+                    position: relative;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    a {
+                        color:$black;
+                        font-size: 18px;
+                        font-family: $font-semi;
+                        height: 100%;
+                        line-height: 90px;
+                        position: relative;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        font-weight: 600;
+                        color:$color-green;
+                        display: inline-block;
+                        @include animate-fade;
+                        &:hover {
+                            transform: scale(1.1);
+                        }                        
+                        @include bp(desktop-sm) {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+                li.menu-item-has-children {
+                    &:after {
+                        content:'';
+                        background: url('../img/ico/caret-down-solid.svg') no-repeat center center;
+                        background-size: contain;
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+                        margin-left: -13px;   
+                        position: relative;
+                        top:2px;                     
+                    }
+                    .sub-menu {
+
+                        display: block;
+                        visibility: hidden;
+                        opacity: 0;
+                        -webkit-transform: translateY(20px);
+                        transform: translateY(20px);
+                        -webkit-transition: all .3s ease-in;
+                        transition: all .3s ease-in;
+                        border: 0;
+
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 1000;
+                        margin: 0;
+                        min-width: 270px;
+                        padding:0px;
+                        background-color: $white;
+                        li {
+                            display: block;
+                            margin-left: 0px;
+                            margin-right: 0px;
+                            padding-left: 0px;
+                            padding-right: 0px;
+                            margin-bottom: 0px;
+                            a {
+                                display: block;
+                                height: auto;
+                                color:$color-green;
+                                font-family: $font-main;
+                                text-transform: none;
+                                letter-spacing: normal;
+                                height: auto;
+                                line-height: 1.5;
+                                font-family: $font-medium;
+                                border-bottom: 1px solid rgba($white, 0.3);
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                @include animate-fade;
+                                font-weight: 700;
+                                font-size: 17px;
+                                line-height: 1.2;
+                                padding: 13px 20px;                                
+                                &:after {
+                                    display: none;
+                                }
+                                &:hover {
+                                    color:$white;
+                                    background: $color-green;
+                                    transform: none;
+                                }
+                            }
+                            &:last-child {
+                                a {
+                                    border:none
+                                }
+                            }
+                        }
+                    }                        
+                    &:hover {
+                        .sub-menu {
+                            visibility: visible;
+                            opacity: 1;
+                            -webkit-transform: scaleY(1);
+                            transform: scaleY(1);
+                            opacity: 1;
+                            visibility: visible;
+                            // display: block;
+                        }                            
+                    }                         
+                }                
+            }
+            .sub-menu {
+                display: none;
+            }            
+        }
+        // ctas
+        .top-bar__ctas {
+            padding-left: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+
+            @include bp(lg-down) {
+                padding-right: 70px;
+            }
+
+            // mobile
+            #mobile-menu--btn {
+                @include centre(y);
+                width: 40px;
+                right: 0px;
+                display: none;
+                @include bp(lg-down) {
+                    display: block;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    border-radius: 6px;
+                    span {
+                        height: 3px;
+                        border-radius:6px;
+                        background-color:$color-blue;
+                        width: 100%;
+                        display: block;
+                        float: right;
+                        @include animate-fade;
+                        margin-top: 3.5px;
+                        margin-bottom: 3.5px;
+                        @include bp(lg) {
+                            margin-top: 4px;
+                            margin-bottom: 4px;
+                        }
+                    }	
+                }
+                .clearfix {
+                    clear: both;
+                }       
+            }
+            // buttons
+
+            a.btn-cta {
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 800;
+                background-color: #FFFFFF;
+                border-style: solid;
+                border-width: 3px 3px 3px 3px;
+                border-color: $color-blue;
+                border-radius: 25px 25px 25px 25px;   
+                display: inline-block;       
+                padding: 12px 24px;
+                margin-left: 40px;
+                color:$color-blue;      
+                @include animate-fade;
+                @include bp(lg) {
+                    margin-left: 30px;
+                }
+                @include bp(md) {
+                    margin-left: 20px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @include bp(sm-down) {
+                    display: none;
+                }
+                &.btn-fill {
+                    background: $color-blue;
+                    color:$white;
+                }
+                &:hover {
+                    background: $color-blue-hover;
+                    border-color:$color-blue-hover;
+                    color:$white;
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+    }
+    // sticky
+    // &.sticky {
+    //     .container {
+    //         height: 90px;
+    //         @include bp(md-down) {
+    //             height: 70px;
+    //         }
+    //         .top-bar__nav .top-bar__menu ul>li a {
+    //             height: 70px;
+    //             line-height: 70px;
+    //         }
+    //         .top-bar__nav .top-bar__menu ul>li a:after {
+    //             bottom:-35px;
+    //         }
+    //     }
+    // }
+}
+
+// Inenr header
+#inner-header {
+    margin-top: 120px;
+    @include bp(lg) {
+        margin-top: 100px;
+    }
+    @include bp(md) {
+        margin-top: 90px;
+    }
+    @include bp(sm-down) {
+        margin-top: 80px;
+    }
+    .container {
+        padding-top: 140px;
+        padding-bottom: 140px;
+        @include bp(lg) {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        @include bp(md) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        @include bp(sm-down) {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+        .header-caption {
+            text-align: center;
+            h1 {
+                @include section-title;
+                color:$white;
+                &:after {
+                    background: $white;
+                }
+            }
+            p {
+                @include section-intro;
+                color:$white;
+                font-size: 22px;
+                @include bp(md-down) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,580 @@
+// Contact
+#contact-header {
+    padding-top:130px;
+    padding-bottom: 140px;
+    background-color: $color-green;
+    margin-top: 90px;
+    position: relative;
+    @include bp(lg) {
+        margin-top: 80px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-size: 80%;
+    }
+    @include bp(md) {
+        margin-top: 80px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-size: 90%;
+    }
+    @include bp(sm-down) {
+        margin-top: 80px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .img-bg {
+        position: absolute;
+        bottom:-100px;
+        filter: brightness( 200% ) contrast( 200% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
+        opacity: 0.12;
+        width: 60%;
+        right:0px;
+        z-index:0;     
+        @include bp(lg) {
+            width: 80%;
+        } 
+        @include bp(md) {
+            width: 90%;
+        }  
+        @include bp(sm-down) {
+            width: 100%;
+        }
+    }
+    .contact-caption {
+        span.title {
+            @include small-title;
+        }
+        h1 {
+            color:$white;
+            font-size: 62px;
+            width: 80%;
+            font-family: $font-medium;
+            line-height: 1.2;
+            margin-bottom: 60px;
+            @include bp(lg) { 
+                font-size: 52px;
+            }
+            @include bp(md) {
+                font-size: 46px;
+                margin-bottom: 40px;
+            }
+            @include bp(sm-down) {
+                font-size: 36px;
+                width: 90%;
+                margin-bottom: 35px;
+            }
+        }
+    }
+    .contact-info {
+        .contact-card {
+            margin-bottom: 50px;
+            @include bp(md) {
+                margin-bottom: 35px;
+            }
+            @include bp(sm-down) {
+                margin-bottom: 35px;
+            }
+            span {
+                display: block;
+                &.label {
+                    font-size: 24px;
+                    color:$white;
+                    margin-bottom: 10px;
+                    opacity: 0.7;
+                    @include bp(lg) {
+                        font-size: 22px;
+                    }
+                    @include bp(md) {
+                        font-size: 20px;
+                    }
+                    @include bp(sm-down) {
+                        font-size: 19px;
+                    }
+                }
+                &.value {
+                    font-size: 30px;
+                    @include bp(lg) {
+                        font-size: 26px;
+                    }
+                    @include bp(md) {
+                        font-size: 24px;
+                    }
+                    @include bp(sm-down) {
+                        font-size: 20px;
+                        font-family: $font-semi;
+                    }
+                    a {
+                        color:$white;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            ul {
+                margin-top: 15px;
+                li {
+                    display: inline-block;
+                    a {
+                        margin-right: 15px;
+                        @include animate-fade;
+                        img {
+                            width: 24px;
+                            filter: brightness(0) invert(1);
+                        }
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Contact Form
+#contact-form {
+    background: #e9e9e9;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include bp(md) {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .contact-intro {
+        padding-top: 80px;
+        @include bp(md) {
+            padding-top: 0px;
+            margin-bottom: 40px;
+            width: 80%;
+        }
+        @include bp(sm-down) {
+            padding-top: 0px;
+            margin-bottom: 35px;
+        }
+        h2 {
+            @include section-title;
+            text-transform: inherit;
+            &:after {
+                margin-left:0px;
+            }
+        }
+    }
+    // form
+    .form-wrapper {
+        background: $white;
+        padding:35px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 9px;
+        box-shadow: 0 40px 76px rgba(0, 0, 0,  0.08);   
+        @include bp(sm-down) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        small {
+            font-size: 15px;
+            display: block;
+        }      
+        form {
+            margin-top: 30px;
+            .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+                border:none;
+                font-weight: bold;
+                padding:0px;
+                color:red;
+                margin:0px;
+                margin-top: 10px;
+            }
+            .form-group {
+                position: relative;
+                width: 100%;
+                margin-bottom: 30px;
+                @include bp(md-down) {
+                    margin-bottom: 15px;
+                }
+                input[type="text"], input[type="tel"], input[type="email"], select, textarea  {
+                    width: 100%;
+                    padding-left: 16px !important;
+                    font-size: 18px;
+                    background: $white;      
+                    height: 60px;
+                    line-height: 60px;
+                    padding-left: 15px;
+                    border-radius: 6px;
+                    border:none;       
+                    background: #e9e9e9;
+                    font-family: $font-main;
+                    @include bp(lg) {
+                        font-size: 17px;
+                    }
+                    &:focus {
+                        outline: 0;
+                    }   
+                }
+                textarea {
+                    padding:15px;
+                    height: 140px;
+                    font-family: $font-main;
+                    line-height: 1.5;
+                }
+                label {
+                    font-size: 14px!important;
+                    margin-bottom: 8px;
+                    color: #444;    
+                    font-weight: 400!important;
+                    display: none;
+                }
+            }
+            .wpcf7-not-valid-tip {
+                padding-top: 4px;
+            }
+            .wpcf7-not-valid {
+                background: pink!important;
+            }
+            input[type="submit"] {
+                @include btn-red;
+                border:none;
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        } 
+    }
+}
+
+#paralax-banner {
+    min-height: 630px;
+    position: relative;
+    z-index:100;
+    @include bp(lg) {
+        min-height: 500px;
+    }
+    @include bp(md) {
+        min-height: 400px;
+    }
+    @include bp(sm-down) {
+        min-height: 300px;
+    }
+    .overlay {
+        @include overlay;
+        background: rgba($black, 0.4);
+    }
+}
+
+// Free Estimate
+#estimate-wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 90px;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#009b9b+0,50ab99+100 */
+background: #009b9b; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #009b9b 0%, #50ab99 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #009b9b 0%,#50ab99 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #009b9b 0%,#50ab99 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009b9b', endColorstr='#50ab99',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    @include bp(lg) {
+        margin-top: 80px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include bp(md) {
+        margin-top: 80px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include bp(sm-down) {
+        margin-top: 80px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    position: relative;
+    .bg-img {
+        width: 100%;
+        position: absolute;
+        left:0px;
+        bottom:0px;
+        opacity: 0.2;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+
+    }
+    header {
+        text-align: center;
+        h1 {
+            @include section-title;
+            color:$white;
+            &:after {
+                background: $white;
+            }
+        }
+        p {
+            max-width: 600px;
+            margin:0px auto;
+            @include section-intro;
+            color:$white;
+        }
+    }
+    .form-wrapper {
+        margin:0px auto;
+        background: $white;
+        margin-top: 50px;
+        border-radius: 9px;
+        box-shadow: 0 40px 76px rgba(0, 0, 0,  0.08);  
+        position: relative;
+        max-width: 90%;
+        background: #dadada;
+        width: 900px;
+        margin:0px auto;
+        margin-top: 60px;
+        @include bp(md-down) {
+            height: auto;
+            margin-top: 30px;
+        }
+        .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+            border:none;
+            font-weight: bold;
+            padding:0px;
+            color:red;
+            margin:0px;
+            margin-top: 10px;
+        }        
+        // &:after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%,-50%);
+        //     width: 90%;
+        //     height: 100%;
+        //     border-radius: 50px;
+        //     background: #fff;
+        //     opacity: .5;
+        //     box-shadow: 0 30px 76px rgba(0, 0, 0, 0.08);
+        //     top: calc(50% + 30px);
+        //     z-index: -1; 
+        // }  
+        ul.nav-tabs {
+            display: flex;
+            li {
+                width: 50%;
+                a {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    height: 74px;
+                    line-height: 74px;
+                    background: #e9e9e9;
+                    font-size: 18px;
+                    font-family: $font-semi;
+                    color:$black;
+                    font-weight: bold;
+                    @include bp(md) {
+                        height: 64px;
+                        line-height: 64px;
+                    }
+                    &.active {
+                        background: #dadada;
+                        color:$color-green-dark;
+                    }
+                }
+                &:first-child {
+                    a {
+                        border-top-left-radius: 9px;
+                    }
+                }
+                &:last-child {
+                    a {
+                        border-top-right-radius: 9px;
+                    }
+                }                
+            }
+        }    
+        .tab-pane {
+            padding:35px;
+            @include bp(md-down) {
+                padding:25px;
+            }
+
+            .control-group {
+                display: flex;
+                .control {
+                    margin-right: 30px;
+                    a {
+                        color:$color-green;
+                    }
+                }
+            }
+ 
+            button[type="submit"], input[type="submit"] {
+               @include btn-all;
+               border:none;
+               &:hover {
+                    transform: scale(1);
+                    cursor: pointer;
+               }
+            }
+            .wpcf7-spinner {
+                display: none;
+            }
+    
+            .form-group {
+                position: relative;
+                width: 100%;
+                margin-bottom: 30px;
+                @include bp(md-down) {
+                    margin-bottom: 15px;
+                }
+                input[type="text"], input[type="tel"], input[type="email"], select, textarea {
+                    width: 100%;
+                    padding-left: 16px !important;
+                    font-size: 14px;
+                    background: $white;      
+                    height: 60px;
+                    line-height: 60px;
+                    padding-left: 15px;
+                    border-radius: 6px;
+                    border:none;       
+                    font-family: $font-main;
+                    &:focus {
+                        outline: 0;
+                    }   
+                }
+                textarea {
+                    padding:15px;
+                    height: 130px;
+                }
+                label, span.label {
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                    display: block;
+                    color: #444;    
+                    text-transform: uppercase;
+                    font-family: $font-semi;
+                    font-weight: 600;
+                }
+            }
+            .control {
+                margin-top: 15px;
+                display: block;
+                a {
+                    color:$color-green;
+                    text-decoration: underline;
+                }
+            }            
+            .wpcf7-not-valid-tip {
+                padding-top: 4px;
+            }
+            .wpcf7-not-valid {
+                background: pink!important;
+            }
+        }         
+    }
+}
+
+// Services
+#bottom-services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include bp(lg) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include bp(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include bp(sm-down) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    header {
+        padding-bottom: 30px;
+        text-align: center;
+        @include bp(md-down) {
+            padding-bottom: 40px;
+        }
+
+        @include bp(sm-down) {
+            padding-bottom: 30px;
+        }
+        h2 {
+           @include section-title;
+        }
+    }
+    // servies
+    #services-slider {
+        .item {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .service-card {
+            border:1px solid #ddd;
+            border-radius: 6px;
+            padding:25px;
+            height: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+            background-color: transparent;
+            background-image: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
+            text-align: center;        
+            @include animate-fade;
+            @include bp(lg) {
+                padding:20px;
+            }
+            @include bp(md) {
+                padding:25px;
+            }
+            @include bp(sm-down) {
+                text-align: center;
+            }
+            &:hover {
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            }
+            .service-icon {
+                height: 70px;
+                margin:0px auto;
+                margin-bottom: 25px;
+                position: relative;
+                img {
+                    @include centre(both);
+                    width: 50px;
+                }
+            }
+            .service-desc {
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    @include bp(lg) {
+                        font-size: 18px;
+                    }
+                    @include bp(md) {
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                    }
+                }
+                p {
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                    @include bp(lg) {
+                        margin-bottom: 20px;
+                    }
+                }
+                a.btn-more {
+                    @include btn-more;
+                }
+            }
+        }    
+    }
+}
