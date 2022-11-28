@@ -15,10 +15,11 @@ edit gulpconfig.json proxy path
 gulp watch -bs
 
 ```
-npm outdated
-npm install -g npm-upgrade
+
 to upgrade package.json and packages
 ```
+npm outdated
+npm install -g npm-upgrade
 npm-upgrade
 ```
 
