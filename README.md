@@ -13,7 +13,22 @@ Installation
 npm install
 edit gulpconfig.json proxy path
 gulp watch -bs
+
 ```
+npm outdated
+npm install -g npm-upgrade
+to upgrade package.json and packages
+```
+npm-upgrade
+```
+
+another way to upgrade
+```
+npm i -g npm-check-updates
+ncu -u
+npm install
+```
+
 
 ### Srdjan gulpfile.js
 ```
