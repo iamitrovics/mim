@@ -58,7 +58,7 @@ function parse_video_uri( $url ) {
 	
 		$video_type = 'youtube';
 		
-		parse_str( $parse['query'] );
+		// parse_str( $parse['query'] );
 		
 		$video_id = $v;	
 		

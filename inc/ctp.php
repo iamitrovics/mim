@@ -168,11 +168,14 @@ function wtp_services() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'with_front' => false,
 	);
 	register_post_type( 'services', $args );
 
 }
 add_action( 'init', 'wtp_services', 0 );
+
+
 
 
 //  Cities

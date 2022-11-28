@@ -56,3 +56,18 @@ add_action( 'wp_enqueue_scripts', function() {
     // Remove inline global CSS on the front end.
     wp_dequeue_style( 'global-styles' );
 }, 20 );
+
+// editor can view  flamingo
+add_filter( 'flamingo_map_meta_cap', function( $meta_caps ) {
+  $meta_caps = array_merge( $meta_caps, array(
+    'flamingo_edit_inbound_message' => 'edit_pages',
+    'flamingo_edit_inbound_messages' => 'edit_pages',
+	'flamingo_delete_inbound_message' => 'edit_pages',
+	'flamingo_delete_inbound_messages' => 'edit_pages',
+	'flamingo_unspam_inbound_message' => 'edit_pages',
+	'flamingo_edit_outbound_messages' => 'edit_pages',
+	'flamingo_edit_outbound_message' => 'edit_pages',
+  ) );
+
+  return $meta_caps;
+} );
