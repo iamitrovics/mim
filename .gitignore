@@ -1,15 +1,13 @@
-.sass-cache
-bower_components
-node_modules
-dist
-dist-product
-npm-debug.log
-/vendor/
-/acf-json/
+# ignore node dependency directories
+node_modules/
+
+# ACF
+acf-json/
+acf-json/*
+
+# exclude gulp files
+gulpconfig.json
+gulpfile.js
+package.json
+package-lock.json
 .DS_Store
-Thumbs.db
-.svn
-.cvs
-*.bak
-*.swp
-.idea/
