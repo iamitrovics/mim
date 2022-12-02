@@ -34,6 +34,7 @@
 		<?php the_field('head_code_snippet', 'options'); ?>
 	<?php endif; ?>
 
+	
 	<script type="application/ld+json">
 	{
 	"@context": "https://schema.org",
