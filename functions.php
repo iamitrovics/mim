@@ -71,3 +71,10 @@ add_filter( 'flamingo_map_meta_cap', function( $meta_caps ) {
 
   return $meta_caps;
 } );
+
+function my_custom_function_name() {
+$app_id = 966242223397117;
+$tag = '<meta property="fb:app_id" content="966242223397117" />';
+echo sprintf($tag, $num);
+}
+add_action( 'wp_head', 'my_custom_function_name' );
