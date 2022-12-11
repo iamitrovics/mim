@@ -975,7 +975,7 @@
                 column-count: 5;
             }
             @include bp(sm-down) {
-                column-count: 3;
+                column-count: 2;
             }
             li {
                 margin-bottom: 8px;
@@ -984,6 +984,9 @@
                 display: table;
                 text-align: center;
                 width: 100%;
+                @include bp(sm-down) {
+                    margin-bottom: 0px;
+                }
                 a {
                     color:$black;
                     font-family: $font-medium;
@@ -997,7 +1000,9 @@
                         font-size: 14px;
                     }
                     @include bp(sm-down) {
-                        font-size: 13px;
+                        font-size: 16px;
+                        padding-top: 10px;
+                        padding-bottom: 15px;
                     }
                     &:hover {
                         color:$color-green;
