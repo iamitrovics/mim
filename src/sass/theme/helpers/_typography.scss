@@ -124,3 +124,7 @@ input[type="submit"] {
   cursor: pointer;
   @include animate-fade;
 }
+
+img {
+  height: auto;
+}
