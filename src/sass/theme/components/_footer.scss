@@ -114,6 +114,9 @@
         }
         .cert {
             width: 33%;
+            a {
+                display: block;
+            }
             img {
                 width: 80%;
                 @include bp(lg) {
@@ -356,7 +359,7 @@
         @include bp(sm-down) {
             margin-top: 15px;
         }
-        a {
+        a, button {
             font-size: 14px;
             margin: 0;
             padding: 0;
@@ -376,6 +379,7 @@
             margin: 0 0 0 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            border: none;
             &:first-of-type {
                 @include bp(sm-down) {
                     margin-left: 0;
@@ -393,15 +397,17 @@
         right: 15px;
         top: 50%;
         margin-top: -10px;
-        width: 15px;
-        height: 15px;
-        opacity: .5;
+        width: 35px;
+        height: 35px;
+        opacity: .7;
         padding: 10px;
         outline: 0;
+        background: transparent;
+        border: none;
         &:before, &:after {
             position: absolute;
             content: ' ';
-            height: 15px;
+            height: 25px;
             width: 2px;
             top: 3px;
             background-color: #fff;
@@ -414,6 +420,7 @@
         }
         &:hover {
             opacity: 1;
+            cursor: pointer;
         }
     }
 }   

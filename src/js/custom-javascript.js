@@ -44,7 +44,7 @@
         $('#blog-header #categories-slider .cat-card a').matchHeight();
 
             // Menu
-    $('#mobile-menu--btn a').click(function(){
+    $('#mobile-menu--btn button').click(function(){
         $('.main-menu-sidebar').addClass("menu-active");
         $('.menu-overlay').addClass("active-overlay");
         $(this).toggleClass('open');

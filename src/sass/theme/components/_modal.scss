@@ -61,6 +61,8 @@ html.fixed {
         backface-visibility: hidden;
         transition: opacity $speed $easing, transform $speed $easing;
         transition-delay: $delay;
+        background: transparent;
+        border: none;
         img {
             width: 24px;
             height: 24px;

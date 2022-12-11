@@ -50,7 +50,7 @@ get_header();
             <div class="blog-headline">
                 <div class="blog-meta">
                     <span>
-                        Posted <a href="javascript:;"><?php echo get_the_date( 'F j, Y' ); ?></a> In 
+                        Posted <?php echo get_the_date( 'F j, Y' ); ?> In 
                     <?php
                     $categories = get_the_category();
                     $separator = ' ';

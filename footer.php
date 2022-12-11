@@ -120,11 +120,11 @@
 			</div>
 			<!-- /.notice-text -->
 			<div class="notice-btns">
-				<a href="#" id="accept-cookie"><?php the_field('button_1_label_popup', 'options'); ?></a>
+				<button id="accept-cookie"><?php the_field('button_1_label_popup', 'options'); ?></button>
 				<a href="<?php the_field('button_2_link_popup', 'options'); ?>" target="_blank" id="more-info-cookie"><?php the_field('button_2_label_popup', 'options'); ?></a>
 			</div>
 			<!-- /.notice-btns -->
-			<a href="javascript:void(0);" id="close-notice"></a>
+			<button id="close-notice"></button>
 		</div>
 		<!-- /#cookie-notice-in -->
 	</div>
@@ -132,9 +132,9 @@
 
     <div class="modal-overlay disclaimer-modal" data-my-element="tooltip-modal" id="tooltip-modal">
 		<div class="modal" data-my-element="tooltip-modal">
-			<a class="close-modal">
+			<button class="close-modal">
 				<img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt="">
-			</a>
+            </button>
 			<!-- close modal -->
 			<div class="disclaimer-modal-wrap">
 				<?php the_field('content_block_modal', 'options'); ?>        

@@ -99,7 +99,7 @@
 	<div class="main-menu-sidebar visible-xs visible-sm visible-md" id="menu">
 
 		<header>
-			<a href="javascript:;" class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></a>
+			<button class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></button>
 		</header>
 		<!-- // header  -->
 
@@ -157,12 +157,12 @@
 					<a href="tel:<?php the_field('phone_number_top_ctas', 'options'); ?>" class="btn-cta"><?php the_field('phone_number_top_ctas', 'options'); ?></a>
 
 					<div id="mobile-menu--btn" class="d-lg-none">
-						<a href="javascript:;">
+						<button>
 							<span></span>
 							<span></span>
 							<span></span>
 							<div class="clearfix"></div>
-						</a>
+						</button>
 					</div>
 					<!-- // mobile  -->	
 

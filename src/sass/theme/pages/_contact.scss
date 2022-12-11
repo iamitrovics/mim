@@ -239,6 +239,7 @@
             input[type="submit"] {
                 @include btn-red;
                 border:none;
+                margin-top: 20px;
                 &:hover {
                     transform: scale(1);
                 }
@@ -414,6 +415,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009b9b', end
             button[type="submit"], input[type="submit"] {
                @include btn-all;
                border:none;
+               margin-top: 20px;
                &:hover {
                     transform: scale(1);
                     cursor: pointer;
