@@ -139,7 +139,7 @@
 		<div class="container">
 
 			<div class="top-bar__branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php the_field('website_logo_general', 'options'); ?>" alt="<?php bloginfo('name'); ?>"></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php the_field('website_logo_general', 'options'); ?>" width="234" alt="<?php bloginfo('name'); ?>"></a>
 			</div>
 			<!-- // branding  -->
 

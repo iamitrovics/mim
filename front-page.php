@@ -7,7 +7,7 @@
                 <?php the_field('hero_text'); ?>
             </div>
             <!-- // caption  -->
-            <img src="<?php the_field('background_image_hero'); ?>" alt="" class="hero-image">
+            <img width="1200" src="<?php the_field('background_image_hero'); ?>" alt="" class="hero-image">
         </div>
         <!-- // container  -->
     </div>
