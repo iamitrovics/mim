@@ -75,6 +75,18 @@ add_filter( 'flamingo_map_meta_cap', function( $meta_caps ) {
 function my_custom_function_name() {
 	$app_id = 966242223397117;
 	$tag = '<meta property="fb:app_id" content="966242223397117" />';
-	echo sprintf($tag, $num);
+	echo sprintf($tag);
   }
   add_action( 'wp_head', 'my_custom_function_name' );
+
+    add_filter( 'wpcf7_spam', function( $spam ) {
+	if ( $spam ) {
+	  return $spam;
+	}
+   
+	if ( false !== stripos( $_POST['your-first'], 'Robertwrack' ) ) {
+	  $spam = true;
+	}
+   
+	return $spam;
+  }, 10, 1 );
