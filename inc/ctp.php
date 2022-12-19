@@ -237,4 +237,5 @@ function wtp_cities() {
 	register_post_type( 'cities', $args );
 
 }
+
 add_action( 'init', 'wtp_cities', 0 );
