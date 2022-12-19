@@ -157,7 +157,7 @@
 					<a href="tel:<?php the_field('phone_number_top_ctas', 'options'); ?>" class="btn-cta"><?php the_field('phone_number_top_ctas', 'options'); ?></a>
 
 					<div id="mobile-menu--btn" class="d-lg-none">
-						<button>
+						<button role="button" aria-label="Mobile Menu">
 							<span></span>
 							<span></span>
 							<span></span>
