@@ -392,6 +392,7 @@
     justify-content: center;
     @include bp(sm-down) {
         flex-wrap: wrap;
+
     }
     span.pages {
         border:none;
@@ -405,6 +406,7 @@
             display: block;
             margin-bottom: 10px;
             width: 100%;
+            
         }
     }
     a, span {
@@ -415,7 +417,7 @@
         font-size: 18px;
         &:hover {
             color:$color-blue;
-        }        
+        }
     }
     span.current {
         border:2px solid $color-blue;

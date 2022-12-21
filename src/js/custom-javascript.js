@@ -34,6 +34,7 @@
         
         $('#home-services .service-card .service-desc p').matchHeight();
         $('#reviews #reviews-slider .item .review-slide .review-text').matchHeight();
+
         $('#why-us .why-card').matchHeight();
         $('#latest-news .blog-card .blog-desc h3').matchHeight();
         $('#bottom-services #services-slider .service-card').matchHeight();

@@ -255,14 +255,16 @@
     padding: 20px 65px 20px 65px;     
     color:$white;
     @include animate-fade;
-    min-width: 335px;
+    min-width: 100%;
     text-align: center;
+    margin-top: 15px;
+
     @include bp(lg) {
-        min-width: 300px;
+        min-width: 100%;
         font-size: 19px;
     }
     @include bp(md) {
-        min-width: 300px;
+        min-width: 100%;
         font-size: 18px;
     }
     @include bp(sm-down) {

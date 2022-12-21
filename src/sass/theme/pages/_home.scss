@@ -496,6 +496,9 @@
         align-items: center;
         justify-content: center;
         padding:0px;
+        @include bp(md){
+            padding: 25px;
+        }
         .cta-caption {
             width: 90%;
             text-align: center;
