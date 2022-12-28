@@ -99,29 +99,31 @@
 	<div class="main-menu-sidebar visible-xs visible-sm visible-md" id="menu">
 
 		<header>
-			<button class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></button>
+			<button class="close-menu-btn" aria-label="Close Menu"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></button>
 		</header>
 		<!-- // header  -->
 
 
 		<nav id="sidebar-menu-wrapper">
 			<div id="menu">    
-				<ul class="nav-links">
-					<?php
-					wp_nav_menu( array(
-						'menu'              => 'primary_menu',
-						'theme_location'    => 'primary_menu',
-						'depth'             => 2,
-						'container'         => false,
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => false,
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'items_wrap' => '%3$s',
-						'walker'            => new wp_bootstrap_navwalkermobile())
-					);
-					?>  
-				</ul>
+				<nav role="navigation">
+					<ul class="nav-links" role="list">
+						<?php
+						wp_nav_menu( array(
+							'menu'              => 'primary_menu',
+							'theme_location'    => 'primary_menu',
+							'depth'             => 2,
+							'container'         => false,
+							'container_class'   => 'collapse navbar-collapse',
+							'container_id'      => false,
+							'menu_class'        => 'nav navbar-nav',
+							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							'items_wrap' => '%3$s',
+							'walker'            => new wp_bootstrap_navwalkermobile())
+						);
+						?>  
+					</ul>
+				</nav>
 			</div>
 			<!-- // menu  -->
 
@@ -157,7 +159,7 @@
 					<a href="tel:<?php the_field('phone_number_top_ctas', 'options'); ?>" class="btn-cta"><?php the_field('phone_number_top_ctas', 'options'); ?></a>
 
 					<div id="mobile-menu--btn" class="d-lg-none">
-						<button role="button" aria-label="Mobile Menu">
+						<button aria-label="Mobile Menu">
 							<span></span>
 							<span></span>
 							<span></span>

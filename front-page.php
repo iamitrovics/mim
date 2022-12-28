@@ -38,16 +38,18 @@
 
                         <div class="col-lg-4 col-md-6">
                             <div class="service-card">
-                                <div class="service-icon">
-                                    <img src="<?php the_field('icon_service'); ?>" alt="">
-                                </div>
-                                <!-- // icon  -->
-                                <div class="service-desc">
-                                    <h3><?php the_title(); ?></h3>
-                                    <?php the_field('intro_text_service'); ?>
-                                    <a href="<?php echo get_permalink(); ?>" class="btn-more"><span>Read More</span></a>
-                                </div>
-                                <!-- // desc  -->
+                                <a href="<?php echo get_permalink(); ?>">
+                                    <div class="service-icon">
+                                        <img src="<?php the_field('icon_service'); ?>" alt="">
+                                    </div>
+                                    <!-- // icon  -->
+                                    <div class="service-desc">
+                                        <h3><?php the_title(); ?></h3>
+                                        <?php the_field('intro_text_service'); ?>
+                                        <small class="btn-more"><span>Read More</span></small>
+                                    </div>
+                                    <!-- // desc  -->
+                                </a>
                             </div>
                         </div>
                         <!-- // card  -->
@@ -147,7 +149,7 @@
                     <?php while( have_rows('trusted_list') ): the_row(); ?>
 
                         <div class="trusted-card">
-                            <a href="<?php the_sub_field('website_url'); ?>" target="_blank"><img src="<?php the_sub_field('logo'); ?>" alt=""></a>
+                            <a href="<?php the_sub_field('website_url'); ?>" aria-label="<?php the_sub_field('title_aria'); ?> " target="_blank"><img src="<?php the_sub_field('logo'); ?>" alt=""></a>
                         </div>
                         <!-- // card  -->
 
@@ -261,7 +263,6 @@
                                 <div class="blog-desc">
                                     <span class="date"><?php echo get_the_date( 'F j, Y' ); ?></span>
                                     <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                    <a href="<?php echo get_permalink(); ?>" class="btn-more"><span>Read More</span></a>
                                 </div>
                             </div>
                         </div>

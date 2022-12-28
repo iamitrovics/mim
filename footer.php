@@ -24,7 +24,7 @@
                             <?php while( have_rows('certifications_footer', 'options') ): the_row(); ?>
 
                                 <div class="cert">
-                                    <a href="<?php the_sub_field('link_to_page'); ?>" target="_blank"><img src="<?php the_sub_field('logo'); ?>" alt=""></a>
+                                    <a href="<?php the_sub_field('link_to_page'); ?>" aria-label="<?php the_sub_field('title_aria'); ?>" target="_blank"><img src="<?php the_sub_field('logo'); ?>" alt=""></a>
                                 </div>
 
                             <?php endwhile; ?>
@@ -36,7 +36,7 @@
                             <?php if( have_rows('social_networks', 'options') ): ?>
                                 <?php while( have_rows('social_networks', 'options') ): the_row(); ?>
 
-                                    <li><a href="<?php the_sub_field('link_to_network'); ?>" target="_blank"><img src="<?php the_sub_field('icon'); ?>" alt=""></a></li>
+                                    <li><a href="<?php the_sub_field('link_to_network'); ?>" aria-label="<?php the_sub_field('title_soc'); ?>" target="_blank"><img src="<?php the_sub_field('icon'); ?>" alt=""></a></li>
 
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -105,7 +105,7 @@
     <!-- // page footer  -->
 
     <div id="float-cta">
-        <a href="tel:<?php the_field('phone_number_float', 'options'); ?>">
+        <a href="tel:<?php the_field('phone_number_float', 'options'); ?>" aria-label="Call us Now">
             <img src="<?php the_field('icon_float', 'options'); ?>" alt="">
             <span><?php the_field('small_title_float', 'options'); ?></span>
             <small><?php the_field('phone_number_float', 'options'); ?></small>
@@ -120,11 +120,11 @@
 			</div>
 			<!-- /.notice-text -->
 			<div class="notice-btns">
-				<button id="accept-cookie"><?php the_field('button_1_label_popup', 'options'); ?></button>
+				<button aria-label="Accept Notice" id="accept-cookie"><?php the_field('button_1_label_popup', 'options'); ?></button>
 				<a href="<?php the_field('button_2_link_popup', 'options'); ?>" target="_blank" id="more-info-cookie"><?php the_field('button_2_label_popup', 'options'); ?></a>
 			</div>
 			<!-- /.notice-btns -->
-			<button id="close-notice"></button>
+			<button id="close-notice" aria-label="Close Notice"></button>
 		</div>
 		<!-- /#cookie-notice-in -->
 	</div>
@@ -132,7 +132,7 @@
 
     <div class="modal-overlay disclaimer-modal" data-my-element="tooltip-modal" id="tooltip-modal">
 		<div class="modal" data-my-element="tooltip-modal">
-			<button class="close-modal">
+			<button class="close-modal" aria-label="Close Modal">
 				<img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt="">
             </button>
 			<!-- close modal -->
