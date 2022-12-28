@@ -928,8 +928,8 @@
             }
             .photo-caption {
                 span {
-                    opacity: 0.6;
-                    font-size: 16px;
+                    opacity: 1;
+                    font-size: 17px;
                     font-style: italic;
                     display: block;
                     text-align: center;
@@ -1216,6 +1216,9 @@
                 display: flex;
                 .control {
                     margin-right: 30px;
+                    @include bp(sm-down) {
+                        font-size: 17px;
+                    }
                     a {
                         color:$color-green;
                     }
